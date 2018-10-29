@@ -4,6 +4,9 @@ import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
+import { HelloIonicPage } from './pages/hello-ionic/hello-ionic';
+
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html'
@@ -22,5 +25,14 @@ export class AppComponent {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
+  }
+}
+
+export class MyApp {
+  rootPage: any = HelloIonicPage;
+  pages: Array<{ title: string, component: any }>;
+
+  constructor() {
+
   }
 }
